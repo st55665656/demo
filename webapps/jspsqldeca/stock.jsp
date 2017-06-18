@@ -5,7 +5,7 @@
     String acc= (String)session.getAttribute("acc");
     String login_or_yet = "";
 		if(acc == null) {
-      response.setHeader("Refresh", "0;index.html" );
+      response.setHeader("Refresh", "0;index.jsp" );
       login_or_yet = "沒登入想幹嘛啦!!!!!!!!!!";
     }
 
@@ -33,7 +33,7 @@
             <body>
                     <h1>查詢結果</h1>
                     <div class="container">
-                    <center><table class='table table-hover'>
+                    <table class='table table-hover'>
                     <tr><th>運動類型</th><th>種類</th><th>族群</th><th>價格</th><th>數量</th><th>商品</th><th>描述</th><th>照片</th><th>　</th></tr>
                     <%
                   		if (rs != null){
@@ -63,7 +63,7 @@
                   		rs.close();
                       conn.close();
                   	%>
-                    </table></center>
+                    </table>
                     <input type="button" value="確認" class="btn btn-default" onclick="window.location='control.jsp';"><br>
                     </div>
             </body>

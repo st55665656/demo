@@ -6,7 +6,7 @@
     String acc= (String)session.getAttribute("acc");
     String login_or_yet = "";
 		if(acc == null) {
-      response.setHeader("Refresh", "0;index.html" );
+      response.setHeader("Refresh", "0;index.jsp" );
       login_or_yet = "沒登入想幹嘛啦!!!!!!!!!!";
     }
 
@@ -35,7 +35,7 @@
               <div class="container">
               <form method="post" action="stock3.jsp?Iid=<%=Iid%>">
               <center><table class='table table-hover'>
-              <tr><th>運動類型</th><th>種類</th><th>族群</th><th>價格</th><th>數量</th><th>商品</th><th>描述</th></tr>
+              <tr><th>運動類型</th><th>種類</th><th>族群</th><th>價格</th><th>數量</th><th>商品</th><th>描述</th><th>圖片</th></tr>
               <%
                 if (rs != null){
                   while(rs.next()){
@@ -46,6 +46,7 @@
                     String storage = rs.getString("storage");
                     String name = rs.getString("name");
                     String illustration = rs.getString("illustration");
+                    String image = rs.getString("image");
               %>
                  <td><%=sport_cat%></td>
                  <td><%=cat%></td>
@@ -53,7 +54,8 @@
                  <td><%=price%></td>
                  <td><%=storage%></td>
                  <td><%=name%></td>
-                 <td><%=illustration%></td></tr>
+                 <td><%=illustration%></td>
+                 <td><img src="<%=image%>" style="width:15vh;height:18vh;"></td></tr>
                  <td><SELECT name="sport_cat" size=1>
                     		<OPTION value ="running" >跑步</OPTION>
                     		<OPTION value ="swimming" >游泳</OPTION>
@@ -72,7 +74,8 @@
                  <td><input type="text" name="price" class="form-control" placeholder="請輸入" /></td>
                  <td><input type="text" name="storage" class="form-control" placeholder="請輸入" /></td>
                  <td><input type="text" name="name" class="form-control" placeholder="請輸入" /></td>
-                 <td><input type="text" name="illustration" class="form-control" placeholder="請輸入" /></td></tr>
+                 <td><input type="text" name="illustration" class="form-control" placeholder="請輸入" /></td>
+                 <td><input type="text" name="image" class="form-control" placeholder="請輸入" /></td></tr>
               <%
                 }}
                 stmt.close();

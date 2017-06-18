@@ -22,7 +22,7 @@
           result = "登　入　成　功";
           response.setHeader("refresh","1;URL=control.jsp");
         }else{
-          response.setHeader("refresh","1;URL=index.html");
+          response.setHeader("refresh","1;URL=index.jsp");
           result = "錯誤的帳號或密碼，即將回登入頁面";
         }
       //登入
@@ -30,7 +30,7 @@
       	rs.close();
       	conn.close();
       }else{
-        response.setHeader("refresh","0;URL=index.html");
+        response.setHeader("refresh","0;URL=index.jsp");
         result = "想幹嘛???";
       }
     }catch(Exception ex){

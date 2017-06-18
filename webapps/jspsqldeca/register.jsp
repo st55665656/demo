@@ -24,7 +24,7 @@
       }else{
         result = "幹???什麼東西???";
       }
-      response.setHeader("refresh","2;URL=index.html");
+      response.setHeader("refresh","2;URL=index.jsp");
 
       stmt.close();
     	rs.close();

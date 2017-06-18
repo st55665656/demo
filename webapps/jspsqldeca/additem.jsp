@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page language="java" import="java.sql.*" %>
 <%@ include file = "db-con.jsp"%>
+<%
+    String acc= (String)session.getAttribute("acc");
+    String login_or_yet = "";
+		if(acc == null) {
+      response.setHeader("Refresh", "0;index.jsp" );
+      login_or_yet = "沒登入想幹嘛啦!!!!!!!!!!";
+    }
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
