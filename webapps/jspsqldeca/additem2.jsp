@@ -7,6 +7,7 @@
 		if(acc == null) {
       response.setHeader("Refresh", "0;index.jsp" );
       login_or_yet = "沒登入想幹嘛啦!!!!!!!!!!";
+    }
 
 	Statement stmt = null;
 	ResultSet rs = null;

@@ -2,6 +2,19 @@
 <%@ page language="java" import="java.sql.*" %>
 <%
     String acc= (String)session.getAttribute("acc");
+
+      String h_count[]= new String[100];
+      for(int i=0; i<100 ;i++){
+        h_count[i] = "hello";
+      }
+      for(int i=0; i<10 ;i++){
+        h_count[i] = "ello";
+      }
+
+
+    session.setAttribute("obj_h",h_count);
+
+
 		String login_or_yet = "";
 		if(acc == null) {
       response.setHeader("Refresh", "0;index.jsp" );
@@ -26,7 +39,7 @@
 <body>
 	<h1><%=login_or_yet%> </h1>
 	<div id="choice">
-		<h1>Hello! <%=acc%> </h1>
+		<h1>Hello!  </h1>
 		<form id="control_panel" method="post" action="stock.jsp">
 			<br>
 			<input type="submit" name="submit_instock" value="查詢庫存" class="btn btn-success">　　

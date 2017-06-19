@@ -22,6 +22,7 @@
   	String storage = request.getParameter("storage");
   	String name = request.getParameter("name");
   	String illustration = request.getParameter("illustration");
+    String image = request.getParameter("image");
 
 
     try{
@@ -51,6 +52,10 @@
       }
       if(illustration != null ){
         String sql = "Update item set illustration = '" + illustration + "' where Iid = '" + Iid + "';";
+        stmt.executeUpdate(sql);
+      }
+      if(image != null ){
+        String sql = "Update item set image = '" + image + "' where Iid = '" + Iid + "';";
         stmt.executeUpdate(sql);
       }
 

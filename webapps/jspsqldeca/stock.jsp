@@ -9,6 +9,17 @@
       login_or_yet = "沒登入想幹嘛啦!!!!!!!!!!";
     }
 
+    String b_count[]= new String[100];
+    b_count = (String[])session.getAttribute("obj_h");
+    for(int i=0 ; i<100; i++){
+      if(b_count[i] != "hello"){
+        ;
+      }else{
+        i=200;
+      }
+    }
+
+
     ResultSet rs = null;
     String result = null;
     Statement stmt =null;

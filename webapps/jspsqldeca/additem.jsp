@@ -50,6 +50,8 @@
   <input type="button" value="返回" class="btn btn-default" onclick="window.location='control.jsp';">
 </form>
 </div>
-
+<%
+  conn.close();
+%>
 </body>
 </html>

@@ -21,6 +21,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <meta charset="utf-8">
             <title>Register</title>
             <!-- 最新編譯和最佳化的 CSS -->
@@ -48,6 +49,16 @@
                     String illustration = rs.getString("illustration");
                     String image = rs.getString("image");
               %>
+			  <script>
+				var sport_cat="<%=sport_cat%>";
+				var cat="<%=cat%>";
+				var cust_cat="<%=cust_cat%>";
+				var price="<%=price%>";
+				var storage="<%=storage%>";
+				var name="<%=name%>";
+				var illustration="<%=illustration%>";
+        var image="<%=image%>";
+			  </script>
                  <td><%=sport_cat%></td>
                  <td><%=cat%></td>
                  <td><%=cust_cat%></td>
@@ -56,26 +67,36 @@
                  <td><%=name%></td>
                  <td><%=illustration%></td>
                  <td><img src="<%=image%>" style="width:15vh;height:18vh;"></td></tr>
-                 <td><SELECT name="sport_cat" size=1>
+                 <td><SELECT name="sport_cat" size=1 id="box1">
                     		<OPTION value ="running" >跑步</OPTION>
                     		<OPTION value ="swimming" >游泳</OPTION>
                     		<OPTION value ="badminton" >羽球</OPTION>
                     </SELECT></td>
-                 <td><SELECT name="cat" size=1>
+                 <td><SELECT name="cat" size=1 id="box2">
                   		<OPTION value ="shirt" >上衣</OPTION>
                   		<OPTION value ="short" >短褲</OPTION>
                   		<OPTION value ="shoes" >鞋子</OPTION>
                   	</SELECT></td>
-                 <td><SELECT name="cust_cat" size=1>
+                 <td><SELECT name="cust_cat" size=1 id="box3">
                   		<OPTION value ="man" >男士</OPTION>
                   		<OPTION value ="woman" >女士</OPTION>
                   		<OPTION value ="child" >小孩</OPTION>
                   	</SELECT></td>
-                 <td><input type="text" name="price" class="form-control" placeholder="請輸入" /></td>
-                 <td><input type="text" name="storage" class="form-control" placeholder="請輸入" /></td>
-                 <td><input type="text" name="name" class="form-control" placeholder="請輸入" /></td>
-                 <td><input type="text" name="illustration" class="form-control" placeholder="請輸入" /></td>
-                 <td><input type="text" name="image" class="form-control" placeholder="請輸入" /></td></tr>
+                 <td><input type="text" name="price" class="form-control" placeholder="請輸入" id="input1"/></td>
+                 <td><input type="text" name="storage" class="form-control" placeholder="請輸入" id="input2"/></td>
+                 <td><input type="text" name="name" class="form-control" placeholder="請輸入" id="input3" /></td>
+                 <td><input type="text" name="illustration" class="form-control" placeholder="請輸入" id="input4"/></td>
+                 <td><input type="text" name="image" class="form-control" placeholder="請輸入" id="input5"/></td></tr>
+				 <script>
+					$("#box1").val(sport_cat);
+					$("#box2").val(cat);
+					$("#box3").val(cust_cat);
+					$("#input1").val(price);
+					$("#input2").val(storage);
+					$("#input3").val(name);
+					$("#input4").val(illustration);
+          $("#input5").val(image);
+				</script>
               <%
                 }}
                 stmt.close();
