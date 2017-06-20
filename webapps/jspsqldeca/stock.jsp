@@ -67,7 +67,9 @@
                        <td><%=name%></td>
                        <td><%=illustration%></td>
                        <td><img src="<%=image%>" style="width:15vh;height:18vh;"></td>
-                       <td><input type="button" value="修改" class="btn btn-default" onclick="window.location='stock2.jsp?Iid=<%=Iid%>';"></td></tr>
+                       <td><input type="button" value="修改" class="btn btn-default" onclick="window.location='stock2.jsp?Iid=<%=Iid%>';"><br><br>
+                       <input type="button" value="刪除" class="btn btn-default" onclick="window.location='member2.jsp?Iid=<%=Iid%>';">
+                      </td></tr>
                   	<%
                   		}}
                   		stmt.close();

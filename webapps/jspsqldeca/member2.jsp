@@ -3,6 +3,7 @@
 <%@ include file = "db-con.jsp"%>
 <%
     String Uid = request.getParameter("Uid");
+      String Iid = request.getParameter("Iid");
     String acc= (String)session.getAttribute("acc");
     String login_or_yet = "";
 		if(acc == null) {
@@ -15,16 +16,20 @@
     Statement stmt =null;
     stmt = conn.createStatement();
 
-
-    try{
+      if(Uid != null){
         String sql = "delete from user where Uid = '" + Uid + "';";
         stmt.executeUpdate(sql);
-    }catch(Exception ex){
-      ;
-    }
-    stmt.close();
-    conn.close();
-    response.setHeader("Refresh", "0;member.jsp" );
+        stmt.close();
+        conn.close();
+        response.setHeader("Refresh", "0;member.jsp" );
+      }
+      if(Iid != null){
+        String sql = "delete from item where Iid = '" + Iid + "';";
+        stmt.executeUpdate(sql);
+        stmt.close();
+        conn.close();
+        response.setHeader("Refresh", "0;stock.jsp" );
+      }
     %>
 <!DOCTYPE html>
 <html>
