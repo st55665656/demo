@@ -43,7 +43,8 @@
 		<form id="control_panel" method="post" action="stock.jsp">
 			<br>
 			<input type="submit" name="submit_instock" value="查詢庫存" class="btn btn-success">　　
-			<input type="button" name="submit_additem" value="新增商品" onclick="window.location='additem.jsp';" class="btn btn-danger">　　
+			<input type="button" name="submit_additem" value="新增商品" onclick="window.location='additem.jsp';" class="btn btn-danger"><br><br>
+      <input type="button" name="submit_additem" value="查看訂單" onclick="window.location='ch_ord.jsp';" class="btn btn-info">　　
 			<input type="button" name="submit_member" value="會員資料" onclick="window.location='member.jsp';" class="btn btn-warning"><br><br>
 			<input type="button" value="登出" class="btn btn-default" onclick="window.location='index.jsp'"><br>
 		</form>

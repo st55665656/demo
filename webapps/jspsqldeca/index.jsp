@@ -37,7 +37,7 @@
 		<h1>迪　卡　稱</h1>
 		<form id="person" method="post" action="login.jsp">
 			帳號：<input type="text" name="ac" class="form-control" placeholder="請輸入帳號" required /><br>
-			密碼：<input type="text" name="pa" class="form-control" placeholder="請輸入密碼" required /> <br>
+			密碼：<input type="password" name="pa" class="form-control" placeholder="請輸入密碼" required /> <br>
 			<input type="button" value="註冊" onclick="Bye()">
 			<input type="submit" name="submitt" value="登入"><br>
 		</form>
@@ -48,9 +48,6 @@
 		<form id="person2" method="post" action="register.jsp">
 			帳號：<input type="text" name="reac" class="form-control" placeholder="請輸入帳號" required /><br>
 			密碼：<input type="text" name="repa" class="form-control" placeholder="請輸入密碼" required /><br>
-			姓名：<input type="text" name="rena" class="form-control" placeholder="請輸入姓名" required /><br>
-			Birthday:<input type="date" name="rebir" required /><br/><br/>
-			memo:<input type="textarea" class="form-control" name="rememo" required /><br/><br/>
 			<input type="submit" value="確認註冊">
 			<input type="button" value="返回主畫面" onclick="Bye2()"><br>
 		</form>

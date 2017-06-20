@@ -119,7 +119,7 @@ input[type="range"]::-webkit-slider-thumb{
 			var findstorage = $('#addid').val();
 			var q = $('#q').val();
 			var n = $('#n').html();
-			swal("你將"+q+"件"+n+"放入購物車，狗幹");
+			swal("你將"+q+"件"+n+"放入購物車。");
 			$.post("cart.jsp",
 				{ find: findstorage, quan: q },
 				function(response){
