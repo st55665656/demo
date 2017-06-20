@@ -23,15 +23,19 @@
 <form action="additem2.jsp" method="POST">
 	運動:
 	<SELECT name="sport_cat" size=1>
-		<OPTION value ="running" >跑步</OPTION>
+    <OPTION value ="workout" >健身</OPTION>
 		<OPTION value ="swimming" >游泳</OPTION>
-		<OPTION value ="badminton" >羽球</OPTION>
+		<OPTION value ="running" >跑步</OPTION>
+		<OPTION value ="badminton" >球類</OPTION>
+		<OPTION value ="biking" >自行車</OPTION>
+		<OPTION value ="other" >其他</OPTION>
 	</SELECT><br/><br/>
 	種類:
 	<SELECT name="cat" size=1>
-		<OPTION value ="shirt" >上衣</OPTION>
+    <OPTION value ="shirt" >上衣</OPTION>
 		<OPTION value ="short" >短褲</OPTION>
 		<OPTION value ="shoes" >鞋子</OPTION>
+		<OPTION value ="accessory" >配件</OPTION>
 	</SELECT><br/><br/>
 	族群:
 	<SELECT name="cust_cat" size=1>
